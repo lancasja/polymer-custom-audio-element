@@ -42,6 +42,28 @@
       code .quotes {
         color: #82bf9a;
       }
+
+      a.github-link {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.5);
+        transition: all 0.2s ease;
+      }
+
+      a.github-link:hover {
+        color: rgba(0, 0, 0, 0.7);
+      }
+
+      a.github-link:active {
+        color: rgba(0, 0, 0, 0.9);
+      }
+
+      a.github-link {
+        font-size: 80%;
+      }
+
+      core-icon[icon="social:post-github"] {
+        top: -2px;
+      }
     </style>
     <h3>Custom Audio Element</h3>
 
@@ -49,15 +71,18 @@
       &lt;synth-pad sound=<span class="quotes">/audio/discharge.wav"</span> label=<span class="quotes">Discharge"</span>&gt;&lt;/synth-pad&gt;
     </code>
 
-    <synth-pad sound="/audio/big_engage.wav" label="Discharge"></synth-pad>
+    <synth-pad sound="/audio/big_engage.mp3" label="Discharge"></synth-pad>
 
     <code>
       &lt;synth-pad sound=<span class="quotes">/audio/applause.wav"</span> label=<span class="quotes">Applause"</span>&gt;&lt;/synth-pad&gt;
     </code>
 
-    <synth-pad sound="/audio/applause.wav" label="Applause"></synth-pad>
+    <synth-pad sound="/audio/applause.mp3" label="Applause"></synth-pad>
 
-    <core-icon icon="social:post-github"></core-icon>
+    <a href="https://github.com/lancasja/polymer-custom-audio-element" class="github-link">
+      <core-icon icon="social:post-github"></core-icon>
+      <span>https://github.com/lancasja/polymer-custom-audio-element</span>
+    </a>
   </template>
   <script>
     (function () {
