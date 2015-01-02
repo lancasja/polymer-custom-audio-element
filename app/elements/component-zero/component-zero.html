@@ -6,11 +6,18 @@
     <style>
       :host {
         display: block;
+        padding: 0 14px;
+      }
+
+      h3 {
+        margin: 40px 0;
       }
 
       synth-pad {
         box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.1);
         position: relative;
+
+        margin-bottom: 40px;
       }
 
       synth-pad:active {
@@ -18,39 +25,39 @@
         top: 2px;
       }
 
+      pre {
+        margin-bottom: -20px;
+      }
+
       code {
         display: block;
-        margin: 7px 0;
         background: #444;
-        color: #eee;
-        padding: 7px 14px;
+        color: #ead288;
         border-radius: 4px;
+        padding: 7px 14px;
+        line-height: 1.5em;
+        margin-bottom: 14px;
+      }
+
+      code .quotes {
+        color: #82bf9a;
       }
     </style>
-
-    <p>This is "Component-zero."</p>
-    <p>I am building a synth. What is the first thing I need?</p>
-    <p>Probably a button, pad, or key. You press or tap one and you hear a sound.</p>
+    <h3>Custom Audio Element</h3>
 
     <code>
-      &lt;synth-pad sound="/audio/applause.wav" label="Applause">&lt;/synth-pad>
+      &lt;synth-pad sound=<span class="quotes">/audio/discharge.wav"</span> label=<span class="quotes">Discharge"</span>&gt;&lt;/synth-pad&gt;
     </code>
+
+    <synth-pad sound="/audio/big_engage.wav" label="Discharge"></synth-pad>
+
+    <code>
+      &lt;synth-pad sound=<span class="quotes">/audio/applause.wav"</span> label=<span class="quotes">Applause"</span>&gt;&lt;/synth-pad&gt;
+    </code>
+
     <synth-pad sound="/audio/applause.wav" label="Applause"></synth-pad>
-    <button id="stopButton" on-click="{{stopAllSounds}}">Stop</button>
 
-
-    
-
-
-    <div class="notes-issues">
-      
-      <h4>Issues</h4>
-      <ul>
-        <li>Reloading the page to stop all sounds.</li>
-        <li>Tapping the button again does nothing if the sound is still playing.</li>
-      </ul>
-
-    </div>
+    <core-icon icon="social:post-github"></core-icon>
   </template>
   <script>
     (function () {

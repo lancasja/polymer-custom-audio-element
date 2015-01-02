@@ -22,9 +22,17 @@
   <!-- endbuild-->
 </head>
 
-<body unresolved>
+<body unresolved fullbleed layout vertical>
 
-  <component-zero></component-zero>
+  <core-header-panel flex>
+    <core-toolbar>
+      <span flex></span>
+      <h2>Fun with <a href="https://www.polymer-project.org/"><core-icon icon="polymer"></core-icon> Polymer</a></h2>
+      <span flex></span>
+    </core-toolbar>
+
+    <component-zero></component-zero>
+  </core-header-panel>
 
   <!-- build:js scripts/app.js -->
   <script src="scripts/app.js"></script>
