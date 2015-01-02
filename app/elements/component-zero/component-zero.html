@@ -1,0 +1,67 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../synth-pad/synth-pad.html">
+
+<polymer-element name="component-zero" attributes="">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      synth-pad {
+        box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.1);
+        position: relative;
+      }
+
+      synth-pad:active {
+        box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0);
+        top: 2px;
+      }
+
+      code {
+        display: block;
+        margin: 7px 0;
+        background: #444;
+        color: #eee;
+        padding: 7px 14px;
+        border-radius: 4px;
+      }
+    </style>
+
+    <p>This is "Component-zero."</p>
+    <p>I am building a synth. What is the first thing I need?</p>
+    <p>Probably a button, pad, or key. You press or tap one and you hear a sound.</p>
+
+    <code>
+      &lt;synth-pad sound="/audio/applause.wav" label="Applause">&lt;/synth-pad>
+    </code>
+    <synth-pad sound="/audio/applause.wav" label="Applause"></synth-pad>
+    <button id="stopButton" on-click="{{stopAllSounds}}">Stop</button>
+
+
+    
+
+
+    <div class="notes-issues">
+      
+      <h4>Issues</h4>
+      <ul>
+        <li>Reloading the page to stop all sounds.</li>
+        <li>Tapping the button again does nothing if the sound is still playing.</li>
+      </ul>
+
+    </div>
+  </template>
+  <script>
+    (function () {
+
+      Polymer({
+        stopAllSounds: function() {
+          // Right now just refreshing the page to stop playing everything
+          location.reload();
+        }
+      });
+
+    })();
+  </script>
+</polymer-element>

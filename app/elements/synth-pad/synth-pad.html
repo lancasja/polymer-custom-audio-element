@@ -1,0 +1,32 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<polymer-element name="synth-pad" attributes="sound label" on-click="{{play}}">
+  <template>
+    <style>
+      :host {
+        display: block;
+        border: 1px solid rgba(50, 50, 50, 0.1);
+        text-align: center;
+        cursor: pointer;
+        border-radius: 4px;
+        background: #fff;
+        color: #444;
+      }
+    </style>
+
+    <audio id="sampleSound" src="{{sound}}"></audio>
+    
+    <h3>{{label}}</h3>
+  </template>
+  <script>
+    (function () {
+
+      Polymer({
+        play: function() {
+          this.$.sampleSound.play();
+        }
+      });
+
+    })();
+  </script>
+</polymer-element>
